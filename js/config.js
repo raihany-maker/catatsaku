@@ -6,5 +6,5 @@
  * Jangan menaruh token, PIN, atau rahasia apa pun di berkas ini.
  */
 window.CATATSAKU_CONFIG = {
-  GAS_URL: 'https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT_ANDA/exec'
+  GAS_URL: 'https://script.google.com/macros/s/AKfycbwIvehpRe1CcnuRMWm0znHiqE_qCZnSEzBIlN70kwrqDZzsamC490wpkjKKi6HcjzHp9Q/exec'
 };
