@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catatsaku</title>
+  <meta name="description" content="Catatsaku — aplikasi pencatatan keuangan pribadi (Google Sheets).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#140D0A">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=1.0.6">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=1.0.6">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1.0.6">
+  <!-- Tema dipasang SEBELUM render pertama (tanpa kedipan). -->
+  <script>
+    (function () {
+      var m = 'sistem';
+      try { m = localStorage.getItem('cs_tema') || 'sistem'; } catch (e) {}
+      var gelap = m === 'gelap' || (m === 'sistem' && !(window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches));
+      document.documentElement.setAttribute('data-theme', gelap ? 'dark' : 'light');
+      document.querySelector('meta[name=theme-color]').setAttribute('content', gelap ? '#140D0A' : '#FAF6F2');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://script.google.com">
+  <link rel="preconnect" href="https://script.googleusercontent.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=1.0.6">
+  <!-- Chart.js dimuat async: angka & halaman tampil dulu, grafik menyusul. -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="boot" id="boot" aria-hidden="true"><span class="brand"><img class="brand-mark" src="img/logo.svg" alt="" width="34" height="34">Catatsaku</span></div>
+  <a class="sr-only" href="#view">Lompat ke konten</a>
+
+  <header class="app-header hidden" id="header"></header>
+  <main class="page" id="main"><div class="wrap" id="view" tabindex="-1"></div></main>
+  <footer class="app-foot hidden" id="foot">
+    <div class="wrap">
+      <span><img class="brand-mark" src="img/logo.svg" alt="" width="24" height="24" style="display:inline-block;width:24px;height:24px;vertical-align:middle;margin-right:8px"><b>Catatsaku © 2026</b> — Sistem Tata Kelola Finansial Personal · Asia/Makassar (WITA)</span>
+      <span class="row" style="gap:18px"><a href="#/pengaturan?tab=keamanan">Keamanan</a><a href="#/pengaturan?tab=log">Audit Log</a></span>
+    </div>
+  </footer>
+  <nav class="bottom-nav hidden" id="bnav" aria-label="Navigasi bawah"></nav>
+  <div class="lock hidden" id="lock" role="dialog" aria-modal="true" aria-label="Kunci aplikasi"></div>
+
+  <script defer src="js/config.js?v=1.0.6"></script>
+  <script defer src="js/util.js?v=1.0.6"></script>
+  <script defer src="js/icons.js?v=1.0.6"></script>
+  <script defer src="js/calc.js?v=1.0.6"></script>
+  <script defer src="js/api.js?v=1.0.6"></script>
+  <script defer src="js/store.js?v=1.0.6"></script>
+  <script defer src="js/ui.js?v=1.0.6"></script>
+  <script defer src="js/charts.js?v=1.0.6"></script>
+  <script defer src="js/aksi.js?v=1.0.6"></script>
+  <script defer src="js/auth.js?v=1.0.6"></script>
+  <script defer src="js/pages/catat.js?v=1.0.6"></script>
+  <script defer src="js/pages/dashboard.js?v=1.0.6"></script>
+  <script defer src="js/pages/riwayat.js?v=1.0.6"></script>
+  <script defer src="js/pages/dompet.js?v=1.0.6"></script>
+  <script defer src="js/pages/anggaran.js?v=1.0.6"></script>
+  <script defer src="js/pages/target.js?v=1.0.6"></script>
+  <script defer src="js/pages/tagihan.js?v=1.0.6"></script>
+  <script defer src="js/pages/laporan.js?v=1.0.6"></script>
+  <script defer src="js/pages/pengaturan.js?v=1.0.6"></script>
+  <script defer src="js/app.js?v=1.0.6"></script>
+</body>
+</html>
